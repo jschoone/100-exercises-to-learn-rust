@@ -11,13 +11,12 @@
 // Use only what you learned! No loops yet, so you'll have to use recursion!
 
 fn factorial(n: u32) -> u32 {
-    let mut result = 1;
-    let mut counter = 0;
-    while counter <= n {
-        result *= counter;
-        counter += 1
+    if n == 0 {
+        1
+    } else {
+        println!("{}", n);
+        n * factorial(n - 1)
     }
-    result
 }
 
 #[cfg(test)]
